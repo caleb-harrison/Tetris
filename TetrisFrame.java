@@ -121,16 +121,16 @@ public class TetrisFrame extends JFrame {
     int redColor = rand.nextInt((MAX_COLOR_VALUE - 75) + 1) + 74;
     int greenColor = rand.nextInt((MAX_COLOR_VALUE - 75) + 1) + 74;
     int blueColor = rand.nextInt((MAX_COLOR_VALUE - 75) + 1) + 74;
+
     // fill color of each box on the tetromino
     Color myColor = new Color(redColor, greenColor, blueColor);
+
     // outline color of each box on the tetromino
     Color myColorDarker = new Color(redColor - 49, greenColor - 49, blueColor - 49);
     
     // set the shape
     char[] allTheTetrominos = {'I', 'J', 'L', 'T', 'S', 'Z', 'O'};
-    
     int pickThisTetrominoNumber = rand.nextInt(allTheTetrominos.length);
-    
     Tetromino tetromino = new Tetromino(allTheTetrominos[pickThisTetrominoNumber], myColor, myColorDarker);
     
     // needs to pick x value between one box away from each edge
@@ -160,17 +160,15 @@ public class TetrisFrame extends JFrame {
    */
   public TetrisFrame(int width, int height) {
 
+    // initialize variables
     this.boardWidth = width;
     this.boardHeight = height;
-    
     this.setSize(width, height);
 
     // add the TetrominoComponent Component
     component = new TetrominoComponent();
-    
     tetromino = createRandomTetromino();
     component.setComponent(tetromino);
-    
     this.add(component);
     
     // add the timer listener

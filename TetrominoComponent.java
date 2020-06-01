@@ -80,6 +80,7 @@ public class TetrominoComponent extends JComponent {
     
   }
   
+  // sets class compenent to a given Tetromino
   public void setComponent(Tetromino tetromino) {
     this.tetromino = tetromino;
   }
