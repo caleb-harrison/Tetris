@@ -12,7 +12,7 @@ public class TetrisViewer {
     // set up the JFrame
     //JFrame frame = new JFrame();
     JFrame frame = new TetrisFrame(1000, 754); // have to add extra 55 to
-    frame.setTitle("Calebh1's Tetris");									  // prevent JFrame size bug
+    frame.setTitle("Caleb's Tetris");									  // prevent JFrame size bug
 	// turn off resizing
     //frame.setResizable(false);
   // add image
