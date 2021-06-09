@@ -19,7 +19,7 @@ public class TetrisFrame extends JFrame {
   
   public static final int MAX_COLOR_VALUE = 256;
   public static final int AMOUNT_TO_MOVE_EACH_CYCLE = TetrominoComponent.BOX_SIZE;  // this is the drop rate
-  public static final int DELAY_IN_MILLISEC = 700;  // set the delay between timer events
+  public static final int DELAY_IN_MILLISEC = 300;  // set the delay between timer events
   
   private Tetromino tetromino;
   private TetrominoComponent component;
