@@ -35,6 +35,8 @@ public class TetrisFrame extends JFrame {
   class TimerListener implements ActionListener{
     public void actionPerformed(ActionEvent event) {
       // every time the timer ticks, do the following:
+
+      // if the tetromino is falling..
       if (isFalling(tetromino)) {
         Point p = new Point(tetromino.getPosition().x,
                             tetromino.getPosition().y + AMOUNT_TO_MOVE_EACH_CYCLE);
@@ -43,7 +45,15 @@ public class TetrisFrame extends JFrame {
           tetromino.setPosition(p);
         }
         repaint();
+      } else {
+        // save current tetromino
+        
+
+        // drop new tetromino
+        tetromino = createRandomTetromino();
+        component.setComponent(tetromino);
       }
+
     }
   } 
   
